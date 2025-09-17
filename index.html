@@ -5,8 +5,60 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Arte no Prato</title>
             <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
         </head>
+        <style>
+            body {
+                font-family: 'Montserrat', 'Segoi UI', 'Arial',sans-serif;
+            }
+        
+            .title {
+                font-size: 2.2rem;
+                font-weight: 800;
+                margin-bottom: 30px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                color: #fff;
+                letter-spacing: 1px
+            }
+            
+            .subtitle {
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 30px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                color: #fff;
+                letter-spacing: 1px
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                gap: 25px;
+            }
 
+            .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            width: 100%;
+            flex-wrap: wrap;
+            }
+
+            .btn-colaborador:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(38, 208, 206, 0.4);
+
+        }
+            .btn-competidor:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(221, 36, 118, 0.4);
+            }
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+        </style>
         <body>
             <div class="landing-page">
                 <header class="logo-container">
@@ -25,5 +77,11 @@
                     </div>
                 </main>
             </div>
+        <script>
+                // Verificação se a fonte Montserrat foi carregada corretamente
+                document.fonts.ready.then(() => {
+                    console.log('Fonte Montserrat carregada:', document.fonts.check('12px Montserrat'));
+                });
+        </script>
         </body>
 </html>

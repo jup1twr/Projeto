@@ -3,55 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arte no Prato - Mapa do Competidor</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Arte no Prato - Mapa do Colaborador</title>
     <style>
         body { 
-        height: 100%;
-        width: 100%;
-        background-image: url('fundo.png'); /* Apenas a imagem do gradiente */
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center
-        }
-    /* Estilos para as páginas dos mapas */
-        .map-page {
-            height: 100%;
+            height: 100vh;
             width: 100%;
             background-image: url('fundo.png');
             background-size: cover;
             background-position: center;
-    
-    /* Configuração Flexbox para o alinhamento */
             display: flex;
-            flex-direction: column; /* Organiza os itens em coluna (verticalmente) */
-            justify-content: center; /* Centraliza verticalmente */
-            align-items: center;     /* Centraliza horizontalmente */
-                }
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
 
-    /* Estilos para o botão de voltar */
+        .map-page {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .map-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .map-button {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+        .unselected-button {
+            opacity: 0.5;
+        }
+
+        .unselected-button:hover {
+            opacity: 1;
+        }
+
         .home-button img {
-            width: 325px; /* Ajuste o tamanho do botão */
-            height: 100px;
+            width: 250px; /* Ajustado para não ficar achatado */
+            height: auto; /* Mantém a proporção original */
             transition: transform 0.2s;
-            }
-
+            margin-top: 10px;
+        }
+                        
         .home-button:hover img {
-        transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+            transform: scale(1.1);
+        }
+
+        .button-section {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center;
             }
+            
+            .map-button {
+                width: 200px;
+            }
+            
+            .home-button img {
+                width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="map-page">
-        <img src="mapa colaborador.png" alt="Mapa do Competidor" class="map-image">
-        <a href="colaborador.html" class="map-link collaborator-link"></a>
-
-        <a href="index.html" class="home-button">
-        <img src="voltar.png" alt="Botão Voltar">
+        <div class="content-wrapper">
+            <!-- Mapa centralizado -->
+            <img src="mapa_colaborador.png" alt="Mapa do Evento Bankrupt" class="map-image">
+            
+            <!-- Botões Competidor e Colaborador -->
+            <div class="button-container">
+                <a href="competidor.html" class="map-link competitor-link">
+                    <img src="competidor.png" alt="Botão Competidor" class="map-button unselected-button">
+                </a>
+                <a href="colaborador.html" class="map-link collaborator-link">
+                    <img src="colaborador.png" alt="Botão Colaborador" class="map-button selected-button">
+                </a>
+            </div>
+            
+            <!-- Botão Voltar -->
+            <div class="button-section">
+                <a href="index.html" class="home-button">
+                    <img src="voltar.png" alt="Botão Voltar">
+                </a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
