@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilos para a página inicial */
+.landing-page {
+    height: 100%;
+    width: 100%;
+    background-image: url('fundo.png'); /* Apenas a imagem do gradiente */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 250px; /* Ajuste o tamanho do logo */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 30px;
+}
+
+.button img {
+    width: 250px;
+    transition: transform 0.2s;
+}
+
+.button img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para as páginas dos mapas permanecem os mesmos */
+.map-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.map-image {
+    max-width: 90%;
+    max-height: 90vh;
+    height: auto;
+    width: auto;
+}
